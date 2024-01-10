@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -14,16 +14,25 @@
     <main class="content">
       <section class="result">
         <div class="result__video-container">
-          <video src="" controls class="result__video" poster=""></video>
+          <video
+            muted
+            loop
+            autoplay
+            src=""
+            controls
+            class="result__video"
+            poster=""
+          ></video>
         </div>
         <form class="search-form">
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Город</h2>
-            <label class="search-form__label">
+            <label for="city" class="search-form__label">
               <span class="search-form__label-text visually-hidden">Город</span>
               <input
                 type="text"
                 placeholder="Санкт Петербург, например"
+                id="city"
                 name="city"
                 class="search-form__textfield"
               />
@@ -32,30 +41,33 @@
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Время суток</h2>
             <div class="search-form__checkbox-list">
-              <label class="search-form__label">
+              <label for="morning" class="search-form__label">
                 <input
                   type="checkbox"
                   name="time"
+                  id="morning"
                   value="morning"
                   class="search-form__checkbox visually-hidden"
                 />
                 <span class="search-form__pseudo-checkbox"></span>
                 <span class="search-form__label-text">Утро</span>
               </label>
-              <label class="search-form__label">
+              <label for="afternoon" class="search-form__label">
                 <input
                   type="checkbox"
                   name="time"
+                  id="afternoon"
                   value="afternoon"
                   class="search-form__checkbox visually-hidden"
                 />
                 <span class="search-form__pseudo-checkbox"></span>
                 <span class="search-form__label-text">День</span>
               </label>
-              <label class="search-form__label">
+              <label for="night" class="search-form__label">
                 <input
                   type="checkbox"
                   name="time"
+                  id="night"
                   value="night"
                   class="search-form__checkbox visually-hidden"
                 />
