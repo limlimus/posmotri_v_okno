@@ -10,6 +10,10 @@ html {
 
 .page {
   inline-size: 1200px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:100vh;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -48,7 +52,6 @@ ol {
 
 .content {
   display: flex;
-  margin: 133px 30px;
   justify-content: flex-start;
   align-items: flex-end;
   min-block-size: 534px;
