@@ -51,6 +51,7 @@ ol {
 }
 
 .content {
+  margin: auto 30px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -85,7 +86,7 @@ ol {
 }
 
 .search-form__fieldset {
-  display: inline-flex;
+  display: flex;
   gap: 5px;
   flex-direction: column;
   border: none;
@@ -93,16 +94,15 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  min-inline-size: 225px;
+  min-inline-size: 223px;
   background-color: transparent;
   border: none;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
   color: rgb(255 255 255 / 0.7);
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 0.8;
 }
 
 .search-form__textfield:hover {
@@ -122,13 +122,13 @@ ol {
   display: flex;
   width: fit-content;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .search-form__label:has(:focus-visible) {
   outline: none;
   border: 1px solid #fff;
   box-sizing: content-box;
-  padding: 2px;
 }
 
 .search-form__label-text {
@@ -140,30 +140,42 @@ ol {
 
 .search-form__checkbox-list .search-form__label-text:hover {
   text-decoration: underline;
-  color: pink;
 }
 
 .search-form__checkbox-list {
+  padding-block-end: 4px;
+  inline-size: 212px;
   display: flex;
-  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .search-form__pseudo-checkbox {
   display: flex;
   inline-size: 19px;
   block-size: 19px;
+  place-self: center;
   border: 1px solid #fff;
   margin-inline-end: 5px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
-  inline-size: 15px;
-  block-size: 15px;
+.search-form__pseudo-checkbox:active {
+  inline-size: 19px;
+  block-size: 19px;
   background-color: #fff;
   place-self: center;
-  box-sizing: content-box;
-  outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline: 1px solid #1b1919;
+  outline-offset: -2px;
+  text-decoration: none;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  inline-size: 19px;
+  block-size: 19px;
+  background-color: #fff;
+  place-self: center;
+  outline: 1px solid #1b1919;
+  outline-offset: -2px;
 }
 
 .search-form__fieldset-title {
@@ -172,16 +184,14 @@ ol {
 }
 
 .button {
-  margin-inline-start: 3px;
-  margin-block-end: 3px;
-  max-block-size: 34px;
+  block-size: 34px;
   padding-block: 6px;
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
-  inline-size: 98%;
+  inline-size: 100%;
   text-align: center;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -193,6 +203,7 @@ ol {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .button:focus {
@@ -205,7 +216,7 @@ ol {
 .button:focus-visible {
   appearance: none;
   outline: thin solid #fff;
-  outline-offset: 2px;
+  outline-offset: -3px;
 }
 
 .search-form__submit-button {
@@ -213,8 +224,8 @@ ol {
 }
 
 .content__details {
-  align-self: flex-start;
   max-inline-size: 400px;
+  block-size: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 22px;
@@ -238,7 +249,7 @@ ol {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 30px;
   max-block-size: 298px;
   overflow: overlay;
   scrollbar-width: thin;
@@ -262,6 +273,11 @@ ol {
   display: block;
   text-decoration: none;
   cursor: pointer;
+  color: #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
 }
 
 .content__card-link:active {
@@ -277,6 +293,10 @@ ol {
   outline-offset: -2px;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -286,11 +306,9 @@ ol {
 .content__video-card-description-container {
   color: #fff;
   flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
-}
-
-.content__video-card-description-container:hover {
-  text-decoration: underline;
 }
 
 .content__video-card-title {
@@ -305,7 +323,7 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
