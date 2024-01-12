@@ -94,11 +94,12 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  min-inline-size: 223px;
+  min-inline-size: 221px;
   background-color: transparent;
   border: none;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
+  border-inline-start: 1px solid transparent;
   color: rgb(255 255 255 / 0.7);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -111,7 +112,7 @@ ol {
 
 .search-form__textfield:active {
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .search-form__textfield:focus {
@@ -120,6 +121,7 @@ ol {
 
 .search-form__label {
   display: flex;
+  padding: 1px;
   width: fit-content;
   cursor: pointer;
   border: 1px solid transparent;
@@ -128,7 +130,10 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: none;
   border: 1px solid #fff;
-  box-sizing: content-box;
+}
+
+.search-form__label:active {
+  border: 1px solid #fff;
 }
 
 .search-form__label-text {
@@ -138,7 +143,7 @@ ol {
   font-weight: 400;
 }
 
-.search-form__checkbox-list .search-form__label-text:hover {
+.search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
 }
 
@@ -184,8 +189,7 @@ ol {
 }
 
 .button {
-  block-size: 34px;
-  padding-block: 6px;
+  padding-block: 5px;
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -224,14 +228,17 @@ ol {
 }
 
 .content__details {
+  align-self: flex-start;
   max-inline-size: 400px;
   block-size: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 22px;
+  align-items: flex-start;
+  row-gap: 26px;
 }
 
 .title {
+  display: block;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
@@ -282,6 +289,7 @@ ol {
 
 .content__card-link:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .content__card-link:focus {
